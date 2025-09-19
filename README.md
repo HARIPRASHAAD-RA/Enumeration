@@ -26,48 +26,76 @@ Open terminal and try execute some kali linux commands
 Following Categories of pen test tools are identified:
 Information Gathering.
 
-Google Hacking:
+## Google Hacking:
 
 Google hacking, also known as Google dorking, is a technique that involves using advanced operators to perform targeted searches on Google. These operators can be used to search for specific types of information, such as sensitive data that may have been inadvertently exposed on the web. Here are some advanced operators that can be used for Google hacking:
 
 site: This operator allows you to search for pages that are within a specific website or domain. For example, "site:example.com" would search for pages that are on the example.com domain.
 Following searches for all the sites that is in the domain yahoo.com
 
-filetype: This operator allows you to search for files of a specific type. For example, "filetype:pdf" would search for all PDF files.
+<img width="1920" height="1080" alt="Screenshot (323)" src="https://github.com/user-attachments/assets/ca0f9b97-12e0-4c65-8de5-51731245d9f6" />
+
+
+
+## filetype: 
+This operator allows you to search for files of a specific type. For example, "filetype:pdf" would search for all PDF files.
 Following searches for pdf file in the domain yahoo.com
+<img width="1920" height="1080" alt="Screenshot (324)" src="https://github.com/user-attachments/assets/8c0a51b6-5933-47b1-a725-a8cea2653b37" />
 
 
 
-intext: This operator allows you to search for pages that contain specific text within the body of the page. For example, "intext:password" would search for pages that contain the word "password" within the body of the page.
 
 
-inurl: This operator allows you to search for pages that contain specific text within the URL. For example, "inurl:admin" would search for pages that contain the word "admin" within the URL.
+## intext: 
+This operator allows you to search for pages that contain specific text within the body of the page. For example, "intext:password" would search for pages that contain the word "password" within the body of the page.
 
-intitle: This operator allows you to search for pages that contain specific text within the title tag. For example, "intitle:index of" would search for pages that contain "index of" within the title tag.
+<img width="1577" height="872" alt="image" src="https://github.com/user-attachments/assets/3475fa44-02aa-4545-ba13-aa24d4bcf33b" />
 
-link: This operator allows you to search for pages that link to a specific URL. For example, "link:example.com" would search for pages that link to the example.com domain.
 
-cache: This operator allows you to view the cached version of a page. For example, "cache:example.com" would show the cached version of the example.com website.
+## inurl: 
+This operator allows you to search for pages that contain specific text within the URL. For example, "inurl:admin" would search for pages that contain the word "admin" within the URL.
+<img width="1920" height="1080" alt="Screenshot (326)" src="https://github.com/user-attachments/assets/9d409a5d-0d0e-480f-bcba-4601d4c6d5ed" />
+
+
+
+
+
+## intitle: 
+This operator allows you to search for pages that contain specific text within the title tag. For example, "intitle:index of" would search for pages that contain "index of" within the title tag.
+<img width="1920" height="1080" alt="Screenshot (327)" src="https://github.com/user-attachments/assets/7d1ca4ab-83f0-413a-88d3-e0ef4363530c" />
+
+## link:
+This operator allows you to search for pages that link to a specific URL. For example, "link:example.com" would search for pages that link to the example.com domain.
+<img width="1920" height="1080" alt="Screenshot (328)" src="https://github.com/user-attachments/assets/2e24581c-f929-45ae-9333-7b0039ac603f" />
+
+
+
+## cache:
+This operator allows you to view the cached version of a page. For example, "cache:example.com" would show the cached version of the example.com website.
+<img width="1920" height="1080" alt="Screenshot (329)" src="https://github.com/user-attachments/assets/287b8b33-83d1-4e1e-b29a-b4da34ad6ee6" />
 
  
-#DNS Enumeration
+# DNS Enumeration
 
 
-##DNS Recon
+## DNS Recon
+
 provides the ability to perform:
 Check all NS records for zone transfers
 Enumerate general DNS records for a given domain (MX, SOA, NS, A, AAAA, SPF , TXT)
 Perform common SRV Record Enumeration
 Top level domain expansion
+
 ## OUTPUT:
 
+<img width="1920" height="936" alt="dnsrecon" src="https://github.com/user-attachments/assets/d85db53a-ba64-4fa5-b99f-6202eb2c7a93" />
 
 
 
 
 
 
-##dnsenum
+## dnsenum
 Dnsenum is a multithreaded perl script to enumerate DNS information of a domain and to discover non-contiguous ip blocks. The main purpose of Dnsenum is to gather as much information as possible about a domain. The program currently performs the following operations:
 
 Get the host’s addresses (A record).
@@ -81,23 +109,24 @@ Perform reverse lookups on netranges (C class or/and whois netranges) (threaded)
 Write to domain_ips.txt file ip-blocks.
 This program is useful for pentesters, ethical hackers and forensics experts. It also can be used for security tests.
 
+## Output:
 
-##smtp-user-enum
+<img width="1920" height="936" alt="dnsenum" src="https://github.com/user-attachments/assets/28f3e1ce-9e68-476e-91be-9ae3baafaa23" />
+
+
+
+## smtp-user-enum
 Username guessing tool primarily for use against the default Solaris SMTP service. Can use either EXPN, VRFY or RCPT TO.
 
 
 In metasploit list all the usernames using head /etc/passwd or cat /etc/passwd:
 
 select any username in the first column of the above file and check the same
+  
+ ## Output:
+ <img width="1920" height="936" alt="smtp" src="https://github.com/user-attachments/assets/669f40ed-63f4-4923-94cb-f0f680bd9a64" />
 
 
-#Telnet for smtp enumeration
-Telnet allows to connect to remote host based on the port no. For smtp port no is 25
-telnet <host address> 25 to connect
-and issue appropriate commands
-  
- ##Output
-  
   
 
 ## nmap –script smtp-enum-users.nse <hostname>
@@ -106,36 +135,8 @@ The smtp-enum-users.nse script attempts to enumerate the users on a SMTP server 
 
 
 ## OUTPUT:
-### site:example.com
-![Screenshot 2025-04-26 062544](https://github.com/user-attachments/assets/292b8490-b899-4867-aa4c-146b0ad0dce1)
-### filetype:pdf
-![Screenshot 2025-04-26 062559](https://github.com/user-attachments/assets/122448cf-c8a8-44a5-8eab-d340670f5fd7)
-### intext:password
-![Screenshot 2025-04-26 062610](https://github.com/user-attachments/assets/41fac2d7-9457-41df-87e4-0ab6d94d641a)
-### inurl:admin
-![Screenshot 2025-04-26 062621](https://github.com/user-attachments/assets/5bc7f252-3d56-415b-bf58-dc1b022b30e9)
-### intitle:index of
-![Screenshot 2025-04-26 062633](https://github.com/user-attachments/assets/9f4e5aca-3fa7-4aaf-91c3-9f4445d29856)
-### link:example.com
-![Screenshot 2025-04-26 062643](https://github.com/user-attachments/assets/79ae0ff4-a103-42fa-b5ef-a1525cd191e7)
-### cache:example.com
-![Screenshot 2025-04-26 062653](https://github.com/user-attachments/assets/b952d195-6ef8-4305-ae19-60194d6ca036)
-## DNS Enmueration
-### DNS Recon
-![Screenshot 2025-04-26 063043](https://github.com/user-attachments/assets/ab5b6559-6632-48ed-9dca-efca62885945)
+<img width="1920" height="936" alt="nmap" src="https://github.com/user-attachments/assets/e6306e74-e9e9-4bb1-b3bc-ad9a4b762216" />
 
-### dnsenum
-![Screenshot 2025-04-26 063057](https://github.com/user-attachments/assets/fdff18fd-8768-4417-a432-cdebe58d760d)
-
-### smtp-user-enum
-![Screenshot 2025-04-26 063109](https://github.com/user-attachments/assets/6cc6f9f7-83c4-4a7e-a447-1920860a5be9)
-![Screenshot 2025-04-26 063122](https://github.com/user-attachments/assets/14efc5a4-e5dc-4589-b808-fdabdf6e456a)
-
-### Telnet for smpt enumeration
-![Screenshot 2025-04-26 063133](https://github.com/user-attachments/assets/799b145d-2824-450f-aac1-14df5e90506b)
-
-### nmap-script smtp-enum-user.nse
-![Screenshot 2025-04-26 063139](https://github.com/user-attachments/assets/a2ed28c9-93aa-44c4-8f1a-27bf100a7556)
 
 ## RESULT:
 The Google hacking keywords and enumeration tools were identified and executed successfully
